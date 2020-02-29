@@ -139,8 +139,9 @@ export default function Booking() {
       treatment,
       varnishState
     };
+    const url = 'https://rekond-bolaget-bokning.netlify.com/.netlify/functions/booking';
 
-    fetch('/booking', {
+    fetch(url, {
       body: JSON.stringify(bookingInfo),
       headers: {
         'Content-Type': 'application/json'

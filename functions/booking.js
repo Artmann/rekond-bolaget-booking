@@ -1,5 +1,13 @@
 exports.handler = function(event, context, callback) {
-  const args = JSON.parse(event.body);
+  const {
+    email,
+    imageFile,
+    licensePlateNumber,
+    name,
+    phoneNumber,
+    treatment,
+    varnishState
+  } = event.body;
 
-  console.log('Processing booking', args);
+  console.log('Processing booking', event.body);
 }
