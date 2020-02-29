@@ -10,4 +10,9 @@ exports.handler = function(event, context, callback) {
   } = event.body;
 
   console.log('Processing booking', event.body);
+
+  callback(null, {
+    statusCode: 200,
+    body: "Hello, World " + event.body
+  });
 }
