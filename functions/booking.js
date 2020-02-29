@@ -1,4 +1,6 @@
 exports.handler = function(event, context, callback) {
+  console.log('Processing booking', event);
+
   const {
     email,
     imageFile,
@@ -9,7 +11,7 @@ exports.handler = function(event, context, callback) {
     varnishState
   } = event.body;
 
-  console.log('Processing booking', event.body);
+
 
   callback(null, {
     statusCode: 200,
